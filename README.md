@@ -1,4 +1,5 @@
 # Nova Blog
+Added NOVA 4 support via lat from JJCLane/nova-blog
 
 This [Laravel Nova](https://nova.laravel.com) package allows you to create a blog, manage blogposts and posts' content. The package is geared towards headless CMS's.
 
