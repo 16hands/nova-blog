@@ -27,11 +27,11 @@
   ],
   "license": "MIT",
   "require": {
-    "php": ">=7.1.0",
+    "php": ">=8.1 <8.4",
     "doctrine/dbal": "^2.9|^3.0",
-    "optimistdigital/nova-locale-field": "^2.0",
-    "whitecube/nova-flexible-content": "^0.2.4",
-    "outl1ne/nova-multiselect-field": ">=1.8.1",
+    "outl1ne/nova-locale-field": "^2.0",
+    "outl1ne/nova-flexible-content": "^0.1",
+    "outl1ne/nova-multiselect-field": "^4",
     "digital-creative/conditional-container": "*",
     "outl1ne/nova-sortable": "^3.0"
   },
