@@ -64,9 +64,9 @@
       "type": "vcs",
       "url": "git@github.com:chriswest101/conditional-container.git"
     },
-    {
-       "type": "vcs",
+    "nova-locale-field": {
+      "type": "vcs",
        "url": "https://github.com/16hands/nova-locale-field"
-     }
+    }
   }
 }
