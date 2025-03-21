@@ -85,9 +85,26 @@ class Post extends TemplateResource
             Select::make('Slug', 'slug_generation')->options(['original' => 'Use existing', 'new_from_title' => 'Generate new from title', 'custom' => 'Create custom'])->hideWhenCreating()->hideFromDetail()->hideFromIndex()->rules('required')->resolveUsing(function () {
                 return $this->slug_generation ?? 'original';
             }),
-            ConditionalContainer::make([
-                Slug::make('Custom slug', 'slug')->rules('required'),
-            ])->if('slug_generation = custom'),
+            /*ConditionalContainer::make([
+               Slug::make('Custom slug', 'slug')->rules('required'),
+           ])->if('slug_generation = custom'),*/
+
+            Text::make('Custom slug', 'slug')
+                ->hide()
+                ->dependsOn(['slug_generation'], function (
+                    Text        $field,
+                    NovaRequest $request,
+                    FormData    $formData
+                ) {
+                    if ($formData->slug_generation === 'custom') {
+                        $field->show()->rules(['required']);
+                    }
+                }),
+
+
+
+
+
             Text::make('Slug', function () {
                 $previewToken = $this->childDraft ? $this->childDraft->preview_token : $this->preview_token;
                 $previewPart = $previewToken ? '?preview=' . $previewToken : '';

@@ -32,7 +32,6 @@
     "outl1ne/nova-locale-field": "^2.0",
     "whitecube/nova-flexible-content": "^1",
     "outl1ne/nova-multiselect-field": "^4",
-    "digital-creative/conditional-container": "*",
     "outl1ne/nova-sortable": "^3.0"
   },
   "autoload": {
