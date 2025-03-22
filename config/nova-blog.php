@@ -68,11 +68,9 @@ return [
 
     'include_featured_image' => false,
 
-    'use_trix' => false,
+    'use_trix' => true,
 
     'include_include_in_bloglist' => false,
-
-    'include_froala_texteditor_option' => false,
 
     'include_related_posts_feature' => false,
 

@@ -15,7 +15,6 @@ use Laravel\Nova\Fields\Markdown;
 use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Fields\BelongsTo;
 use Laravel\Nova\Fields\Select;
-use Froala\NovaFroalaField\Froala;
 use OptimistDigital\NovaBlog\NovaBlog;
 use Whitecube\NovaFlexibleContent\Flexible;
 use Laravel\Nova\Http\Requests\NovaRequest;
@@ -24,8 +23,7 @@ use OptimistDigital\NovaBlog\Nova\Fields\Title;
 use OptimistDigital\NovaLocaleField\LocaleField;
 use OptimistDigital\NovaBlog\Models\RelatedPost;
 use Outl1ne\MultiselectField\Multiselect;
-use DigitalCreative\ConditionalContainer\ConditionalContainer;
-use DigitalCreative\ConditionalContainer\HasConditionalContainer;
+
 
 class Post extends TemplateResource
 {
@@ -69,12 +67,6 @@ class Post extends TemplateResource
                 Textarea::make('Embed media code (twitter, iframe, etc.)', 'media_code'),
                 Text::make('Media caption', 'caption')
             ]);
-
-        if (config('nova-blog.include_froala_texteditor_option')) {
-            $postContent->addLayout('Text section in Froala', 'text_froala', [
-                Froala::make('Text section in Froala', 'text_content_froala')
-            ]);
-        }
 
         $fields = [
             ID::make()->sortable(),
