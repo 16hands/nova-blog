@@ -27,7 +27,6 @@ use Outl1ne\MultiselectField\Multiselect;
 
 class Post extends TemplateResource
 {
-    use HasConditionalContainer;
     public static $title = 'name';
     public static $model = 'OptimistDigital\NovaBlog\Models\Post';
     public static $displayInNavigation = false;
