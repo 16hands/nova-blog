@@ -2,6 +2,7 @@
 
 namespace OptimistDigital\NovaBlog;
 
+use Illuminate\Http\Request;
 use Laravel\Nova\Nova;
 use Laravel\Nova\Tool;
 use OptimistDigital\NovaBlog\Models\Post;
@@ -58,5 +59,11 @@ class NovaBlog extends Tool
         if (is_callable($localesConfig)) return call_user_func($localesConfig);
         if (is_array($localesConfig)) return $localesConfig;
         return ['en' => 'English'];
+    }
+
+
+    public function menu(Request $request)
+    {
+        // TODO: Implement menu() method.
     }
 }
